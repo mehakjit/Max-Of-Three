@@ -20,21 +20,10 @@ public class TestMaxOfThree {
 		System.out.println(maximum.maxOfThree(i, j , k));
 	}
 
-	public Integer maxOfThree(Integer a, Integer b, Integer c) {
-		Integer max = (a.compareTo(b) > 0) ?  a : b ;
+	public <E extends Comparable<E>> E maxOfThree(E a, E b, E c) {
+		E max = (a.compareTo(b) > 0) ?  a : b ;
 		max = (max.compareTo(c) > 0) ? max : c ;
 		return max;
 	}
 	
-	public Float maxOfThree(Float a, Float b, Float c) {
-		Float max = (a.compareTo(b) > 0) ?  a : b ;
-		max = (max.compareTo(c) > 0) ? max : c ;
-		return max;
-	}
-	
-	public String maxOfThree(String a, String b, String c) {
-		String max = (a.compareTo(b) > 0) ?  a : b ;
-		max = (max.compareTo(c) > 0) ? max : c ;
-		return max;
-	}
 }
