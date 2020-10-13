@@ -15,6 +15,9 @@ public class TestMaxOfThree {
 		System.out.println("Enter the three float no to find out which is maximum");
 		Float l = sc.nextFloat(), m = sc.nextFloat(), n = sc.nextFloat();
 		System.out.println(maximum.maxOfThree(l, m , n));
+		System.out.println("Enter the three String values to find out which is maximum");
+		String i = sc.next(), j = sc.next(), k = sc.next();		
+		System.out.println(maximum.maxOfThree(i, j , k));
 	}
 
 	public Integer maxOfThree(Integer a, Integer b, Integer c) {
@@ -25,6 +28,12 @@ public class TestMaxOfThree {
 	
 	public Float maxOfThree(Float a, Float b, Float c) {
 		Float max = (a.compareTo(b) > 0) ?  a : b ;
+		max = (max.compareTo(c) > 0) ? max : c ;
+		return max;
+	}
+	
+	public String maxOfThree(String a, String b, String c) {
+		String max = (a.compareTo(b) > 0) ?  a : b ;
 		max = (max.compareTo(c) > 0) ? max : c ;
 		return max;
 	}

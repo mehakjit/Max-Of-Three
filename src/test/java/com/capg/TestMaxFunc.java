@@ -34,4 +34,19 @@ public class TestMaxFunc {
 		TestMaxOfThree maximum = new TestMaxOfThree();
 		Assert.assertTrue(((Float)5f).equals(maximum.maxOfThree(3f, 4f, 5f)));
 	}
+	@Test
+	public void ifFirst_String_Element_Max_ReturnTrue() {
+		TestMaxOfThree maximum = new TestMaxOfThree();
+		Assert.assertTrue(("abc").equals(maximum.maxOfThree("abc", "ab", "a")));
+	}
+	@Test
+	public void ifSecond_String_Element_Max_ReturnTrue() {
+		TestMaxOfThree maximum = new TestMaxOfThree();
+		Assert.assertTrue(("abc").equals(maximum.maxOfThree("ab", "abc", "a")));
+	}
+	@Test
+	public void ifThird_String_Element_Max_ReturnTrue() {
+		TestMaxOfThree maximum = new TestMaxOfThree();
+		Assert.assertTrue(("abc").equals(maximum.maxOfThree("a", "ab", "abc")));
+	}
 }
