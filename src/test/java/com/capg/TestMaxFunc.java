@@ -14,6 +14,7 @@ public class TestMaxFunc {
 		TestMaxOfThree<Float> test = new TestMaxOfThree<Float>(1f,2f,5f,3f,4f,0f);
 		Assert.assertTrue(((Float)5f).equals(test.max()));
 	}
+	@Test
 	public void testString() {
 		TestMaxOfThree<String> test = new TestMaxOfThree<String>("a","ab","abcde","abcd");
 		Assert.assertTrue(("abcde").equals(test.max()));
