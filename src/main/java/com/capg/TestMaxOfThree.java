@@ -15,8 +15,10 @@ public class TestMaxOfThree<E extends Comparable<E>> {
 	public static <E extends Comparable<E>> E maxOfThree(ArrayList<E> list) {
 		if (list.size() == 0)
 			return null;
-		else
+		else {
+			System.out.println("Maximum : " + Collections.max(list));
 			return Collections.max(list);
+		}
 	}
 	 public E max() {
 		 return maxOfThree(list);
